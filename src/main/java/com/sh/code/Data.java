@@ -20,11 +20,10 @@ public class Data implements Writable {
 	//总流量
 	private long totalPayLoad;
 
-	public Data(String telNo, long upPayLoad, long downPayLoad, long totalPayLoad) {
+	public Data(String telNo, long upPayLoad, long downPayLoad) {
 		this.telNo = telNo;
 		this.upPayLoad = upPayLoad;
 		this.downPayLoad = downPayLoad;
-		this.totalPayLoad = totalPayLoad;
 	}
 
 	public Data() {
@@ -41,7 +40,7 @@ public class Data implements Writable {
 		this.telNo=dataInput.readUTF();
 		this.upPayLoad=dataInput.readLong();
 		this.downPayLoad=dataInput.readLong();
-		this.totalPayLoad=dataInput.readLong();1
+		this.totalPayLoad=dataInput.readLong();
 	}
 
 	public String getTelNo() {
