@@ -41,7 +41,7 @@ public class Data implements Writable {
 		this.telNo=dataInput.readUTF();
 		this.upPayLoad=dataInput.readLong();
 		this.downPayLoad=dataInput.readLong();
-		this.totalPayLoad=dataInput.readLong();
+		this.totalPayLoad=dataInput.readLong();1
 	}
 
 	public String getTelNo() {
