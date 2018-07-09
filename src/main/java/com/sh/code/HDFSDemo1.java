@@ -18,9 +18,9 @@ public class HDFSDemo1 {
 	}
 
 	public static void testUpload() throws Exception {
-		InputStream in = new FileInputStream("/Users/sunhao/test.txt");
+		InputStream in = new FileInputStream("/Users/sunhao/word");
 		FileSystem fileSystem = FileSystem.get(new URI("hdfs://0.0.0.0:9000"), new Configuration());
-		OutputStream out = fileSystem.create(new Path("/test.txt"));
+		OutputStream out = fileSystem.create(new Path("/word"));
 		IOUtils.copyBytes(in, out, 4096, true);
 	}
 
@@ -33,7 +33,7 @@ public class HDFSDemo1 {
 
 	public static void testDelete() throws Exception {
 		FileSystem fileSystem = FileSystem.get(new URI("hdfs://0.0.0.0:9000"), new Configuration());
-		fileSystem.delete(new Path("/test.txt"), true);
+		fileSystem.delete(new Path("/tmp"), true);
 	}
 
 	public static void testMkdir() throws Exception {
