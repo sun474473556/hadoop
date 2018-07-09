@@ -33,7 +33,7 @@ public class HDFSDemo1 {
 
 	public static void testDelete() throws Exception {
 		FileSystem fileSystem = FileSystem.get(new URI("hdfs://0.0.0.0:9000"), new Configuration());
-		fileSystem.delete(new Path("/tmp"), true);
+		fileSystem.delete(new Path("/sum"), true);
 	}
 
 	public static void testMkdir() throws Exception {
